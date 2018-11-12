@@ -7,9 +7,33 @@
 </head>
 <body>
 	
-	<h1>halloo</h1>
-	<h2>this work?</h2>
+	<nav id="main-nav" class="main-nav main-nav--revealed">
+		<div class="wrapper">
+			<ul class="nav-items">
+				<li class="nav-items__item nav-items__item--current-item"><a href="index.html">Home</a></li>
+				<li class="nav-items__item"><a href="about.html">About Me</a></li>
+				<li class="nav-items__item"><a href="#">Work</a></li>
+				<li class="nav-items__item"><a href="#">Photography</a></li>
+				<li class="nav-items__item"><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
 
-<script src="js/app.js"></script>
+	<header id="header" class="main-header">
+		<div class="wrapper">
+			<h1 class="main-header__heading">
+				<span class="main-header__heading--darker">Angelica</span> Lopez.
+			</h1>
+			<p class="main-header__description main-header__description--narrow">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum inventore maiores deserunt voluptates consectetur explicabo vel totam voluptatem?</p>
+			<!--<a href="about.html" class="btn btn--pink">Read More</a>-->
+			<div class="btn">
+				<div class="btn__bg--pink"></div>
+				<a href="about.html">Read More</a>
+			</div>
+			<img src="img/01.jpg" alt="Tech devices" class="main-header__image">
+		</div>
+	</header>
+
+<script src="scripts/app.js"></script>
 </body>
 </html>

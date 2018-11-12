@@ -1,4 +1,43 @@
-$accent: #f05a66;
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,700,800');
+
+/*****************
+	Variables
+******************/
+$accent: #f05a66;					/*yellow: #f0c35a*/
 $bg-color: #f9f5ec;
 $primary-color: #464449;
 $secondary-color: #9c9b97;
+$body-font: 'Heebo', 'Helvetica', 'Arial', sans-serif;
+$heading-font: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+
+
+/*************
+	Mixins
+**************/
+@define-mixin clearfix {
+	&::after {
+		clear: both;
+		content: "";
+		display: table;		/* for extra browser support */
+	}
+}
+
+@define-mixin atSmall {
+	@media (min-width: 530px) {
+		@mixin-content;
+	}
+}
+
+@define-mixin atMedium {
+	@media (min-width: 800px) {
+		@mixin-content;
+	}
+}
+
+@define-mixin atLarge {
+	@media (min-width: 1010px) {
+		@mixin-content;
+	}
+}

@@ -1,6 +1,195 @@
 @import 'normalize.css';
 @import '_config';
 
+
+/*********************
+	General Styles
+**********************/
+* {
+	box-sizing: border-box;
+}
+
 body {
-	color: $accent;
+	background-color: $bg-color;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1100px;
+	width: 90vw;
+	@mixin atMedium {
+		width: 85vw;
+	}
+}
+
+::selection {
+	background-color: #ff6f7b;
+	color: white;
+}
+
+
+/*****************
+	Navigation
+******************/
+.main-nav {
+	background-color: $accent;
+	height: auto;
+	overflow: hidden;
+	position: fixed;
+	top: -60px;
+	transition: all 0.3s ease-out;
+	width: 100vw;
+	z-index: 10;
+
+	&:hover,
+	&--revealed {
+		top: 0;
+	}
+}
+
+.nav-items {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	height: 80px;
+	list-style: none;
+	margin: 0 0 0 -20px;
+	padding-left: 0;
+	@mixin atMedium {
+		justify-content: flex-start;
+	}
+
+	&__item {
+		cursor: pointer;
+		font-family: $body-font;
+		font-size: 0.75rem;
+		font-weight: 400;
+		letter-spacing: 0.03rem;
+		opacity: 0.65;
+		text-transform: uppercase;
+		transition: all 0.3s ease-out;
+
+		a {
+			color: white;
+			padding: 20px 20px;
+		}
+
+		&--current-item,
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+
+/*************
+	Header
+**************/
+.main-header {
+	padding-bottom: 100px;
+	padding-top: 120px;
+
+	@mixin atMedium {
+		padding-top: 180px;
+	}
+
+	&__heading {
+		color: $secondary-color;
+		font-family: $heading-font;
+		font-size: 3rem;
+		letter-spacing: 0.1rem;
+
+		&--darker {
+			color: $primary-color;
+			font-weight: 900;
+		}
+	}
+
+	&__description {
+		color: $secondary-color;
+		font-family: $body-font;
+		font-size: 1rem;
+		font-weight: 300;
+		letter-spacing: 0.05rem;
+		line-height: 2.5;
+		margin-bottom: 35px;
+		@mixin atSmall {
+			font-size: 0.9rem;
+		}
+		@mixin atMedium {
+			font-size: 0.8rem;
+		}
+
+		&--narrow {
+			width: 100%;
+			@mixin atSmall {
+				width: 63%;
+			}
+		}
+	}
+
+	&__image {
+		margin-top: 80px;
+		width: 100%;
+	}
+}
+
+
+/*************
+	Button
+**************/
+.btn {
+	border-bottom: 1px solid $accent;
+	color: white;
+	cursor: pointer;
+	font-family: $body-font;
+	font-size: 0.8rem;
+	font-weight: 300;
+	height: 40px;
+	letter-spacing: 0.15rem;
+	overflow: hidden;
+	padding: 10px 30px;
+	position: relative;
+	text-decoration: none;
+	transition: all 0.3s ease-out;
+	width: 145px;
+
+	&__bg--pink {
+		background-color: $accent;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		transition: all 0.3s ease-out;
+		width: 100%;
+		z-index: -1;
+	}
+
+	a,
+	a:visited {
+		color: white;
+		position: relative;
+		top: 2px;
+		z-index: 3;
+	}
+
+	&:hover {
+		border-bottom: 1px solid $accent;
+		color: $accent;
+		padding: 10px 60px 10px 0;
+
+		& .btn__bg--pink {
+			top: 100%;
+		}
+
+		& a,
+		& a:visited {
+			color: $accent;
+			font-weight: 400;
+		}
+	}
 }
