@@ -1,4 +1,6 @@
 require('./gulp/gulp-styles');
+require('./gulp/gulp-scripts');
+require('./gulp/gulp-modernizr');
 
 var gulp = require('gulp'),
 	browserSync = require('browser-sync').create(),
@@ -21,10 +23,9 @@ gulp.task('watch', function() {
 		gulp.start('cssInject');
 	});
 
-	//watch('./app/scripts/**/*.js', function() {
-	//	browserSync.reload();
-	//	gulp.start('scriptsRefresh');		// to define!!
-	//});
+	watch('./app/scripts/*.js', function() {
+		gulp.start('scriptsRefresh');		// to define!!
+	});
 });
 
 
@@ -33,4 +34,6 @@ gulp.task('cssInject', ['styles'], function() {
 			   .pipe(browserSync.stream());
 });
 
-//insert scriptsRefresh here
+gulp.task('scriptsRefresh', ['scripts'], function() {
+	browserSync.reload();
+});
