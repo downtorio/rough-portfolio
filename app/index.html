@@ -11,10 +11,10 @@
 		<div class="wrapper">
 			<ul class="nav-items">
 				<li class="nav-items__item nav-items__item--current-item"><a href="index.html">Home</a></li>
-				<li class="nav-items__item"><a href="about.html">About Me</a></li>
-				<li class="nav-items__item"><a href="#">Work</a></li>
-				<li class="nav-items__item"><a href="#">Photography</a></li>
-				<li class="nav-items__item"><a href="#">Contact</a></li>
+				<li class="nav-items__item" id="about-link"><a href="about.html">About Me</a></li>
+				<li class="nav-items__item" id="work-link"><a href="#">Work</a></li>
+				<li class="nav-items__item" id="photography-link"><a href="#">Photography</a></li>
+				<li class="nav-items__item" id="contact-link"><a href="#">Contact</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -25,7 +25,6 @@
 				<span class="main-header__heading--darker">Angelica</span> Lopez.
 			</h1>
 			<p class="main-header__description main-header__description--narrow">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum inventore maiores deserunt voluptates consectetur explicabo vel totam voluptatem?</p>
-			<!--<a href="about.html" class="btn btn--pink">Read More</a>-->
 			<div class="btn">
 				<div class="btn__bg--pink"></div>
 				<a href="about.html">Read More</a>
@@ -34,6 +33,27 @@
 		</div>
 	</header>
 
-<script src="scripts/app.js"></script>
+	<footer id="footer" class="footer">
+		<div class="footer__text">&copy; Angelica Lopez 2018</div>
+	</footer>
+
+	<div class="modal">
+		<div class="modal__x">
+			<div class="modal__x--one"></div>
+			<div class="modal__x--two"></div>
+		</div>
+		<div class="modal__content">
+			<h2 class="modal__heading">Get in touch</h2>
+			<h3 class="modal__email">email@addy.com</h3>
+			<div class="modal__icons">
+				<div class="modal__icons--icon i-facebook"><img src="img/facebook.png"></div>
+				<div class="modal__icons--icon i-twitter"><img src="img/twitter.png"></div>
+				<div class="modal__icons--icon i-instagram"><img src="img/instagram.png"></div>
+				<div class="modal__icons--icon i-linkedin"><img src="img/linkedin.png"></div>
+			</div>
+		</div>
+	</div>
+
+<script src="temp/temp-scripts/app.js"></script>
 </body>
 </html>

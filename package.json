@@ -6,9 +6,13 @@
 		"waypoints": "^4.0.1"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.1.5",
+		"@babel/preset-env": "^7.1.5",
 		"autoprefixer": "^9.3.1",
+		"babel-loader": "^8.0.4",
 		"browser-sync": "^2.26.3",
 		"gulp": "^3.9.1",
+		"gulp-modernizr": "^3.0.0",
 		"gulp-postcss": "^8.0.0",
 		"gulp-watch": "^5.0.1",
 		"postcss-hexrgba": "^1.0.1",
